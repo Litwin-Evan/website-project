@@ -2,6 +2,9 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import "./website-schedule.js";
 import "./website-hero-banner.js";
+import "./website-news-band.js";
+import "./website-stats-band.js";
+import "./website-teams-page.js";
 
 export class WebsiteRouter extends DDDSuper(LitElement) {
 
@@ -47,17 +50,14 @@ export class WebsiteRouter extends DDDSuper(LitElement) {
       return html`<website-schedule></website-schedule>`;
     }
     if (this.page === "teams") {
-      return html`
-        <h2>Our Teams</h2>
-        <p>8U Putt Pack Cubs</p>
-        <p>10U Putt Pack Eagles</p>
-        <p>12U Putt Pack Eagles</p>
-        <p>14U Iron Wedge United</p>
+      return html`<website-teams-page></website-teams-page>
       `;
     }
     return html`
         <website-hero-banner></website-hero-banner>
+        <website-stats-band></website-stats-band>
         <website-schedule></website-schedule>
+        <website-news-band></website-news-band>
     `;
   }
 }
