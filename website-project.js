@@ -8,6 +8,9 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "./website-top-banner.js";
 import "./website-nav-menu.js";
 import "./website-schedule.js";
+import "./website-router.js";
+import "./website-hero-banner.js";
+import "./website-footer.js";
 
 /**
  * `website-project`
@@ -72,11 +75,9 @@ export class WebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
   
       <website-nav-menu></website-nav-menu>
   
-      <div class="wrapper">
-        <slot></slot>
-      </div>
-  
-      <website-schedule></website-schedule>
+      <website-router></website-router>
+
+      <website-footer></website-footer>
     `;
   }
 

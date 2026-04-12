@@ -10,12 +10,14 @@ export class WebsiteSchedule extends DDDSuper(LitElement) {
   constructor() {
     super();
     this.games = [];
+    this.view = "cards";
   }
 
   static get properties() {
     return {
       ...super.properties,
-      games: { type: Array }
+      games: { type: Array },
+      view: { type: String }
     };
   }
 
@@ -34,9 +36,11 @@ export class WebsiteSchedule extends DDDSuper(LitElement) {
         display: block;
         font-family: var(--ddd-font-navigation);
         padding: var(--ddd-spacing-4);
+        color-scheme: light dark;
       }
       h2 {
         text-align: center;
+        color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-white));
       }
       .schedule-band {
         display: flex;
@@ -45,7 +49,7 @@ export class WebsiteSchedule extends DDDSuper(LitElement) {
         justify-content: center;
       }
       .game-card {
-        background-color: var(--ddd-theme-accent);
+        background-color: light-dark(var(--ddd-theme-default-skyLight), var(--ddd-theme-default-beaverBlue));
         border: var(--ddd-border-md);
         border-radius: var(--ddd-radius-lg);
         padding: var(--ddd-spacing-4);
@@ -55,15 +59,62 @@ export class WebsiteSchedule extends DDDSuper(LitElement) {
         font-weight: bold;
         font-size: var(--ddd-font-size-s);
         margin-bottom: var(--ddd-spacing-2);
+        color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-white));
       }
       .details {
         font-size: var(--ddd-font-size-xs);
-        color: gray;
+        color: light-dark(var(--ddd-theme-default-coalyGray), var(--ddd-theme-default-skyLight));
+      }
+      .calendar {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .calendar th {
+        background-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-coalyGray));
+        color: var(--ddd-theme-default-white);
+        padding: var(--ddd-spacing-2);
+        text-align: left;
+      }
+      .calendar td {
+        border: var(--ddd-border-md);
+        padding: var(--ddd-spacing-2);
+        color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-white));
       }
     `];
   }
 
   render() {
+    const params = new URLSearchParams(window.location.search);
+    const isCalendar = params.get("page") === "schedule";
+
+    if (isCalendar) {
+      return html`
+        <h2>Full Schedule</h2>
+        <table class="calendar">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Home</th>
+              <th>Away</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${this.games.map(game => html`
+              <tr>
+                <td>${game.date}</td>
+                <td>${game.time}</td>
+                <td>${game.home}</td>
+                <td>${game.away}</td>
+                <td>${game.location}</td>
+              </tr>
+            `)}
+          </tbody>
+        </table>
+      `;
+    }
+
     return html`
       <h2>Upcoming Games</h2>
       <div class="schedule-band">

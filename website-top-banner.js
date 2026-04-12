@@ -42,16 +42,16 @@ export class WebsiteTopBanner extends DDDSuper(I18NMixin(LitElement)) {
 
   // Lit scoped styles
   static get styles() {
-    return [super.styles,
-    css`
+    return [super.styles, css`
       :host {
         display: block;
         font-family: var(--ddd-font-navigation);
+        color-scheme: light dark;
       }
       .wrapper {
         margin: 0;
         padding: var(--ddd-spacing-4);
-        background-color: var(--ddd-theme-default-skyLight);
+        background-color: light-dark(var(--ddd-theme-default-skyLight), var(--ddd-theme-default-coalyGray));
         height: 200px;
         width: 100%;
         display: flex;
@@ -66,6 +66,7 @@ export class WebsiteTopBanner extends DDDSuper(I18NMixin(LitElement)) {
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
+        color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-white));
       }
       img {
         width: 150px;

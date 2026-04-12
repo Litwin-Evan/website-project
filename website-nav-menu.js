@@ -35,7 +35,8 @@ export class WebsiteNavMenu extends DDDSuper(LitElement) {
       :host {
         display: block;
         font-family: var(--ddd-font-navigation);
-        background-color: var(--ddd-theme-primary);
+        color-scheme: light dark;
+        background-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-coalyGray));
       }
       nav {
         display: flex;
@@ -46,19 +47,19 @@ export class WebsiteNavMenu extends DDDSuper(LitElement) {
       a {
         padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
         text-decoration: none;
-        color: white;
+        color: light-dark(var(--ddd-theme-default-white), var(--ddd-theme-default-skyLight));
         font-size: var(--ddd-font-size-s);
         font-weight: bold;
         text-transform: uppercase;
       }
       a:hover {
-        background-color: white;
-        color: var(--ddd-theme-primary);
+        background-color: light-dark(var(--ddd-theme-default-white), var(--ddd-theme-default-beaverBlue));
+        color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-white));
       }
       button {
         display: none;
-        background-color: var(--ddd-theme-primary);
-        color: white;
+        background-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-coalyGray));
+        color: var(--ddd-theme-default-white);
         border: none;
         padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
         cursor: pointer;
