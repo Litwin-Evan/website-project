@@ -26,7 +26,7 @@ export class WebsiteTopBanner extends DDDSuper(I18NMixin(LitElement)) {
     this.registerLocalization({
       context: this,
       localesPath:
-        new URL("./locales/website-top-banner.ar.json", import.meta.url).href +
+        new URL("./locales/", import.meta.url).href +
         "/../",
     });
   }
