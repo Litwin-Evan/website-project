@@ -61,7 +61,7 @@ export class WebsiteFooter extends DDDSuper(LitElement) {
       <div class="footer">
         <div class="section">
           <h3>Putt Pack</h3>
-          <p>The premier youth golf association in State College, PA. Developing young golfers since 2010.</p>
+          <p>The premier youth mini-golf association in State College, PA. Developing young golfers since 2010.</p>
         </div>
         <div class="section">
           <h3>Contact</h3>

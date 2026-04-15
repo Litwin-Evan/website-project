@@ -10,7 +10,7 @@ export class WebsiteNewsBand extends DDDSuper(LitElement) {
   constructor() {
     super();
     this.articles = [
-      { title: "Putt Pack Spring Season Kicks Off!", date: "April 1, 2026", summary: "The spring season is here and our young golfers are ready to compete across State College." },
+      { title: "Putt Pack Spring Season Kicks Off!", date: "April 1, 2026", summary: "The spring season is here and our young putt putt golfers are ready to compete across State College." },
       { title: "New Coaching Staff Announced", date: "March 15, 2026", summary: "Putt Pack is excited to welcome three new coaches to help develop our players this season." },
       { title: "Registration Open for Summer Camp", date: "March 1, 2026", summary: "Sign up now for our summer golf camp for ages 6-18. Spots are filling up fast!" }
     ];
