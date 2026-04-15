@@ -10,10 +10,10 @@ export class WebsiteTeamsPage extends DDDSuper(LitElement) {
   constructor() {
     super();
     this.teams = [
-      { name: "8U Putt Pack Cubs", coach: "Coach Davis", players: 12, description: "Our youngest golfers learning the basics of the game." },
+      { name: "8U Putt Pack Cubs", coach: "Coach Davis", players: 12, description: "Our youngest mini-golfers learning the basics of the game." },
       { name: "10U Putt Pack Eagles", coach: "Coach Smith", players: 15, description: "Building fundamentals and competing in local tournaments." },
-      { name: "12U Putt Pack Eagles", coach: "Coach Johnson", players: 14, description: "Developing competitive skills and course management." },
-      { name: "14U Iron Wedge United", coach: "Coach Williams", players: 13, description: "Advanced players competing at the regional level." }
+      { name: "12U Putt Pack Eagles", coach: "Coach Johnson", players: 14, description: "Developing competitive skills and mini-course management." },
+      { name: "14U Iron Putter United", coach: "Coach Williams", players: 13, description: "Advanced players competing at the regional level." }
     ];
   }
 
