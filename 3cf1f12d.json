@@ -1,0 +1,10 @@
+{
+    "items": [
+      { "id": 1, "title": "Home", "slug": "home" },
+      { "id": 2, "title": "Schedule", "slug": "schedule" },
+      { "id": 3, "title": "Teams", "slug": "teams" },
+      { "id": 4, "title": "News", "slug": "news" },
+      { "id": 5, "title": "About", "slug": "about" },
+      { "id": 6, "title": "Contact", "slug": "contact" }
+    ]
+  }
