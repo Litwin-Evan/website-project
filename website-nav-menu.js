@@ -23,7 +23,9 @@ export class WebsiteNavMenu extends DDDSuper(LitElement) {
 
   connectedCallback() {
     super.connectedCallback();
-    fetch("/api/menu.json")
+
+    const dataURL = new URL("./api/menu.json", import.meta.url).href;
+    fetch(dataURL)
       .then(res => res.json())
       .then(data => {
         this.items = data.items;
