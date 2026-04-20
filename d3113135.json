@@ -1,0 +1,7 @@
+{
+    "games": [
+      { "id": 1, "home": "Putt Pack Eagles", "away": "Birdie Boys", "date": "April 15, 2026", "time": "6:00 PM", "location": "State College Mini Golf Club" },
+      { "id": 2, "home": "Iron Putter United", "away": "Putt Pack Eagles", "date": "April 20, 2026", "time": "2:00 PM", "location": "Bryce Jordan Center Fields" },
+      { "id": 3, "home": "Putt Pack Eagles", "away": "Par Three Gangsters", "date": "April 27, 2026", "time": "4:00 PM", "location": "State College Mini Golf Club" }
+    ]
+  }
