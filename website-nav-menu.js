@@ -87,7 +87,7 @@ export class WebsiteNavMenu extends DDDSuper(LitElement) {
   render() {
     return html`
       <button @click="${() => this.open = !this.open}">
-        ${this.open ? "▲ Close Menu" : "☰ Menu"}
+        ${this.open ? "Close Menu" : "Menu"}
       </button>
 
       <nav class="${this.open ? 'open' : ''}">

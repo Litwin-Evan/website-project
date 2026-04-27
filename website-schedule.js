@@ -39,6 +39,8 @@ export class WebsiteSchedule extends DDDSuper(LitElement) {
         font-family: var(--ddd-font-navigation);
         padding: var(--ddd-spacing-4);
         color-scheme: light dark;
+        border-bottom: 4px solid light-dark(var(--ddd-theme-default-skyLight), var(--ddd-theme-default-beaverBlue));
+        margin-bottom: var(--ddd-spacing-8);
       }
       h2 {
         text-align: center;
@@ -54,8 +56,13 @@ export class WebsiteSchedule extends DDDSuper(LitElement) {
         background-color: light-dark(var(--ddd-theme-default-skyLight), var(--ddd-theme-default-beaverBlue));
         border: var(--ddd-border-md);
         border-radius: var(--ddd-radius-lg);
-        padding: var(--ddd-spacing-4);
-        width: 250px;
+        padding: var(--ddd-spacing-6);
+        width: 320px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .game-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--ddd-boxShadow-sm);
       }
       .teams {
         font-weight: bold;

@@ -71,10 +71,10 @@ export class WebsiteTopBanner extends DDDSuper(I18NMixin(LitElement)) {
        
       }
       .hover-underline {
-  font-size: 2rem;
-  color: black;
-  position: relative;
-  display: inline-block;
+        font-size: 2rem;
+        color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-white));
+        position: relative;
+        display: inline-block;
 }
 
 .hover-underline::after,
@@ -121,11 +121,11 @@ export class WebsiteTopBanner extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
     
-<div class="wrapper">
-    <img src="${this.logo}" alt="Logo">
-    <div class="league-name hover-underline">${this.leagueName}</div>
-  
-</div>
+    <div class="wrapper">
+      <img src="${this.logo}" alt="Logo">
+      <div class="league-name hover-underline">Mini Golf League</div>
+    
+    </div>
 
     `;
 

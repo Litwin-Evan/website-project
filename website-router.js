@@ -60,7 +60,6 @@ export class WebsiteRouter extends DDDSuper(LitElement) {
       return html`
         <div style="padding: 40px; text-align: center;">
           <h2>About Putt Pack</h2>
-          <p>Putt Pack is the premier youth golf association in State College, PA. Founded in 2010, we have been developing young golfers and building community ever since.</p>
         </div>
       `;
     }
@@ -68,9 +67,6 @@ export class WebsiteRouter extends DDDSuper(LitElement) {
       return html`
         <div style="padding: 40px; text-align: center;">
           <h2>Contact Us</h2>
-          <p>PO Box 1234, State College, PA 16801</p>
-          <p>Email: info@puttpack.org</p>
-          <p>Phone: (814) 555-0123</p>
         </div>
       `;
     }
