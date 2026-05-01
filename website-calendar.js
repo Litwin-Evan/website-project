@@ -29,7 +29,8 @@ export class WebsiteCalendar extends DDDSuper(LitElement) {
     this.games = [
       { id: 1, home: "Putt Pack Eagles", away: "Birdie Boys", date: "April 15, 2026", time: "6:00 PM", location: "State College Mini Golf Club" },
       { id: 2, home: "Iron Putter United", away: "Putt Pack Eagles", date: "April 20, 2026", time: "2:00 PM", location: "Bryce Jordan Center Fields" },
-      { id: 3, home: "Putt Pack Eagles", away: "Par Three Gangsters", date: "April 27, 2026", time: "4:00 PM", location: "State College Mini Golf Club" }
+      { id: 3, home: "Putt Pack Eagles", away: "Par Three Gangsters", date: "April 27, 2026", time: "4:00 PM", location: "State College Mini Golf Club" },
+      { "id": 4, "home": "Putt Pack Eagles", "away": "Birdie Gals", "date": "May 8, 2026", "time": "4:00 PM", "location": "State College Mini Golf Club" }
     ];
   }
 
@@ -145,7 +146,7 @@ export class WebsiteCalendar extends DDDSuper(LitElement) {
         color: light-dark(white, var(--ddd-theme-default-nittanyNavy));
         border-radius: var(--ddd-radius-sm);
         padding: 2px 4px;
-        font-size: 10px;
+        font-size: 20px;
         margin-top: 2px;
         overflow: hidden;
         text-overflow: ellipsis;
